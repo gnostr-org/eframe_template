@@ -72,6 +72,14 @@ impl eframe::App for TemplateApp {
             }
         );
 
+        //
+        //use egui::panel::Side::Right;
+        //egui::SidePanel::new(Right, "right1").min_width(100.0).resizable(true).show(ctx, |ui| {
+        //    ui.heading(">>>>>----->>right1 sidepanel<<-----<<<<<");
+        //    }
+        //);
+        //
+
         egui::CentralPanel::default().show(ctx, |ui| {
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading("eframe template");
@@ -98,6 +106,15 @@ impl eframe::App for TemplateApp {
                 egui::warn_if_debug_build(ui);
             });
         });
+
+        //
+        // use egui::panel::Side::Right;
+        // egui::SidePanel::new(Right, "right2").min_width(100.0).resizable(true).show(ctx, |ui| {
+        //     ui.heading(">>>>>----->>right2 sidepanel<<-----<<<<<");
+        //     }
+        // );
+        //
+
     }
 }
 
