@@ -64,6 +64,12 @@ impl eframe::App for TemplateApp {
             });
         });
 
+        use egui::panel::Side::Left;
+        egui::SidePanel::new(Left, "left").show(ctx, |ui| {
+            // The central panel the region left after adding TopPanel's and SidePanel's
+            ui.heading("eframe template");
+            });
+
         egui::CentralPanel::default().show(ctx, |ui| {
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading("eframe template");
